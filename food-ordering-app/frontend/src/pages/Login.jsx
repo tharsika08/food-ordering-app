@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import api from '../api/axios';
 import { useAuth } from '../context/AuthContext';
 
@@ -98,9 +98,15 @@ export default function Login() {
           </form>
 
           <p style={{ marginTop: '1.5rem', textAlign: 'center', color: '#A09080', fontSize: '0.85rem' }}>
-            Don't have an account?{' '}
-            <a href="/register" className="auth-link" style={{ color: '#F5C842', fontWeight: 700, textDecoration: 'none' }}>Register here</a>
-          </p>
+  Don't have an account?{' '}
+  <Link
+    to="/register"
+    className="auth-link"
+    style={{ color: '#F5C842', fontWeight: 700, textDecoration: 'none' }}
+  >
+    Register here
+  </Link>
+</p>
         </div>
       </div>
     </div>
