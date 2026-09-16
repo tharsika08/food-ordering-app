@@ -175,7 +175,9 @@ const items = [
 
 async function seedData() {
   try {
-    await mongoose.connect(process.env.MONGO_URI);
+    await mongoose.connect(process.env.MONGO_URI, {
+  dbName: "fooddb"
+});
     console.log('MongoDB connected');
 
     // Clear existing items
