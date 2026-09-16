@@ -74,7 +74,7 @@ export default function Menu() {
     link.rel = 'stylesheet';
     document.head.appendChild(link);
     setLoading(true);
-    api.get('/api/menu')
+    api.get('/menu')
       .then(r => { setItems(r.data); setLoading(false); })
       .catch(err => { setError(err.message); setLoading(false); });
   }, []);
